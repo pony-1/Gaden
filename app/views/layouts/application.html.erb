@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Garden</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <a class="navbar-brand" href="/">Garden::anout</a>
+      <ul>
+        <li><%= link_to"ログイン",root_path %></li>
+        <li><%= link_to"トピック一覧",topics_path %></li>
+      </ul>
+    </header>
+    <footer>
+      <p>○×株式会社</p>
+    </footer>
+    <%= yield %>
+
+  </body>
+</html>
