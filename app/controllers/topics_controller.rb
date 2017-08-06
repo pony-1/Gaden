@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  # ログイン有無のチェック
+  before_action :authenticate_user!
   before_action :set_topic, only: %i[edit update destroy]
 
   def index
@@ -41,7 +43,6 @@ class TopicsController < ApplicationController
     if @topic.invalid?
         render :new
     end
-    render :confirm
   end
 
   private
