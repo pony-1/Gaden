@@ -1,0 +1,13 @@
+<div class="container">
+  <%= profile_img(@user) %>
+  <br>
+  <%= @user.name %>
+  <h2>フォロー一覧</h2>
+  <%= render 'follower_form' %>
+
+  <div class="container-child col-md-12 col-sm-12 col-xs-12">
+    <br>
+    <h2>フォローワー一覧</h2>
+    <%= render 'followed_form' %>
+  </div>
+</div>
