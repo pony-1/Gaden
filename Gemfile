@@ -82,7 +82,7 @@ gem 'dotenv-rails'
   gem 'unicorn'
 
   gem 'therubyracer', platforms: :ruby
-  
+
 group :development, :test do
 
   gem 'capistrano', '3.6.0'
