@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :dies, only: [:index, :new, :create]
+
+
+  get 'dies/index'
 
   get 'notifications/index'
 
@@ -15,7 +19,6 @@ Rails.application.routes.draw do
       registrations: "users/registrations",
       omniauth_callbacks: "users/omniauth_callbacks"
   }
-
   resources :users, only: %i[index show]
   resources :relationships, only: %i[create destroy]
   resources :topics do

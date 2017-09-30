@@ -1,7 +1,7 @@
 # if RAILS_ENV=development
 #   User.destroy_all
 
-10.times do
+1.times do
   email = Faker::Internet.email
   name = Faker::Name.name
   password = 'password'
@@ -14,16 +14,15 @@
 end
 
 n = 1
-while n <= 10
+while n <= 1
   topic = Topic.create(
-    title: 'シード',
-    content: 'こんにちは！',
+    title: '私は死ぬ前に海を見たい',
     user_id: n
   )
   k = 1
-  while k <= 10
+  while k <= 1
     topic.comments.create(
-      content: 'おはよう！',
+      content: 'いいですね',
       user_id: n,
       topic_id: topic.id
     )
